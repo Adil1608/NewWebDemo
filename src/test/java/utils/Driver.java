@@ -9,11 +9,13 @@ import java.time.Duration;
 public class Driver {
 
     public static WebDriver driver;
-    public Driver() {}
 
-    public static void killDriver(){
+    public Driver() {
+    }
+
+    public static void killDriver() {
         driver.close();
-        driver=null;
+        driver = null;
     }
 
     public static void initalize(String browser) {
@@ -37,7 +39,7 @@ public class Driver {
             System.out.println("Browser type not supported");
         }
 
-        if(driver!= null){
+        if (driver != null) {
             return;
         }
         ChromeOptions options = new ChromeOptions();

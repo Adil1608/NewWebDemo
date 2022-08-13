@@ -7,11 +7,11 @@ Feature: Login tests
     And I enter password as "99379937"
     And I tap on Next after entering password
 
-  @TC001
+  @TC001 @regression
   Scenario:  Verify successful login when user enter valid username and password and click on Login button
     Then I should see user should be successfully Logged In
 
-  @TC002
+  @TC002 @regression
   Scenario Outline:  Verify compose functionality
     And I click on compose button on homepage
     And I enter To address as "<toEmail>" in compose window

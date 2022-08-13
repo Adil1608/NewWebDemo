@@ -10,7 +10,14 @@ import org.openqa.selenium.TakesScreenshot;
 import java.io.File;
 import java.io.IOException;
 
+import static utils.Driver.killDriver;
+
 public class Hooks extends baseClass {
+
+    @Before
+    public void beforeScenario(){
+        Driver.initalize(Constants.BROWSER);
+    }
 
     @After
     public void afterScenario(Scenario scenario) {
@@ -28,6 +35,7 @@ public class Hooks extends baseClass {
             System.out.println("This will run before SS");
         }
         //        System.out.println(driver.queryAppState("com.alefeducation.arabits.dev"));
-        driver.quit();
+        killDriver();
+        System.out.println("This will run before SS");
     }
 }

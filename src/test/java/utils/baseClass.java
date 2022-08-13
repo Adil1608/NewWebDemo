@@ -15,12 +15,11 @@ public class baseClass {
     public WebDriver driver;
 
     public baseClass() {
-        getdriver.initalize(Constants.BROWSER);
         init();
     }
 
     public void init() {
-        this.driver = getdriver.driver;
+        this.driver = Driver.driver;
     }
 
     /***

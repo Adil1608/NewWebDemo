@@ -6,10 +6,15 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.time.Duration;
 
-public class getdriver {
+public class Driver {
 
     public static WebDriver driver;
-    public getdriver() {}
+    public Driver() {}
+
+    public static void killDriver(){
+        driver.close();
+        driver=null;
+    }
 
     public static void initalize(String browser) {
         String driverPath = "";
